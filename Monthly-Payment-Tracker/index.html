@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Payment Tracker</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid py-4">
+        <!-- Header Section -->
+        <header class="mb-4">
+            <h1 class="text-center mb-4">Monthly Payment Tracker</h1>
+            <div class="row g-3 mb-3">
+                <div class="col-12 col-md-4">
+                    <label for="yearSelector" class="form-label">Select Year:</label>
+                    <select id="yearSelector" class="form-select">
+                        <!-- Will be populated by JavaScript -->
+                    </select>
+                </div>
+                <div class="col-12 col-md-3">
+                    <label class="form-label">&nbsp;</label>
+                    <button id="downloadBtn" class="btn btn-success w-100">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download me-2" viewBox="0 0 16 16">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                        </svg>
+                        Download Year Data
+                    </button>
+                </div>
+                <div class="col-12 col-md-5">
+                    <label for="personInput" class="form-label">Add New Person:</label>
+                    <div class="input-group">
+                        <input type="text" id="personInput" class="form-control" placeholder="Enter person name">
+                        <button id="addPersonBtn" class="btn btn-primary">Add Person</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Legend Section -->
+        <div class="legend-section mb-4">
+            <h5>Legend:</h5>
+            <div class="d-flex gap-3 flex-wrap">
+                <div class="legend-item">
+                    <span class="legend-box paid">✔</span>
+                    <span>Paid</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-box not-paid">❌</span>
+                    <span>Not Paid</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Section -->
+        <div class="table-responsive">
+            <table id="paymentTable" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th class="person-column">Person</th>
+                        <!-- Month columns will be added by JavaScript -->
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Rows will be added by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Footer with Summary -->
+        <footer class="mt-4">
+            <div id="summarySection" class="card">
+                <div class="card-body">
+                    <h6 class="card-title">Payment Summary</h6>
+                    <div id="summaryContent">
+                        <!-- Summary will be added by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,326 @@
+/* General Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-fluid {
+    max-width: 1400px;
+}
+
+/* Header Styles */
+header h1 {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Download Button */
+#downloadBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#downloadBtn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Legend Section */
+.legend-section {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.legend-section h5 {
+    margin-bottom: 0.5rem;
+    color: #495057;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.legend-box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.legend-box.paid {
+    background-color: #28a745;
+    color: white;
+}
+
+.legend-box.not-paid {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Table Styles */
+.table-responsive {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#paymentTable {
+    margin-bottom: 0;
+    min-width: 100%;
+}
+
+#paymentTable thead {
+    background-color: #343a40;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#paymentTable thead th {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #495057;
+}
+
+#paymentTable thead th.current-month {
+    background-color: #ffc107;
+    color: #000;
+}
+
+#paymentTable tbody td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.75rem;
+    min-width: 60px;
+    min-height: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid #dee2e6;
+}
+
+/* Person Column */
+.person-column {
+    background-color: #495057 !important;
+    position: sticky;
+    left: 0;
+    z-index: 5;
+    min-width: 150px;
+    max-width: 200px;
+    text-align: left !important;
+}
+
+#paymentTable tbody td.person-cell {
+    background-color: #6c757d;
+    color: white;
+    position: sticky;
+    left: 0;
+    z-index: 4;
+    cursor: default;
+    text-align: left;
+    font-weight: 500;
+    min-width: 150px;
+    max-width: 200px;
+}
+
+.person-cell-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.person-name {
+    flex: 1;
+    word-break: break-word;
+}
+
+.delete-person-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.delete-person-btn:hover {
+    background-color: #c82333;
+}
+
+.delete-person-btn:active {
+    transform: scale(0.95);
+}
+
+/* Payment Cell States */
+.payment-cell {
+    position: relative;
+}
+
+.payment-cell.paid {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.payment-cell.paid:hover {
+    background-color: #c3e6cb;
+}
+
+.payment-cell.not-paid {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.payment-cell.not-paid:hover {
+    background-color: #f5c6cb;
+}
+
+.payment-cell.current-month {
+    border: 2px solid #ffc107 !important;
+}
+
+.payment-cell.paid.current-month {
+    background-color: #d4edda;
+    box-shadow: 0 0 0 2px #ffc107;
+}
+
+.payment-cell.not-paid.current-month {
+    background-color: #f8d7da;
+    box-shadow: 0 0 0 2px #ffc107;
+}
+
+/* Month Column Highlighting */
+.month-column.current-month {
+    background-color: #fff3cd !important;
+}
+
+#paymentTable tbody td.month-cell.current-month {
+    border-left: 3px solid #ffc107;
+    border-right: 3px solid #ffc107;
+}
+
+/* Summary Section */
+#summarySection {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#summarySection .card-title {
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+#summaryContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.summary-item {
+    padding: 0.5rem 1rem;
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.summary-item strong {
+    color: #495057;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .legend-section {
+        padding: 0.75rem;
+    }
+    
+    #paymentTable thead th,
+    #paymentTable tbody td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        min-width: 50px;
+    }
+    
+    .person-column,
+    #paymentTable tbody td.person-cell {
+        min-width: 120px;
+        max-width: 150px;
+    }
+    
+    .payment-cell.paid,
+    .payment-cell.not-paid {
+        font-size: 1rem;
+    }
+    
+    .delete-person-btn {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+    
+    .summary-item {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.25rem;
+    }
+    
+    #paymentTable thead th,
+    #paymentTable tbody td {
+        padding: 0.4rem;
+        font-size: 0.85rem;
+        min-width: 45px;
+    }
+    
+    .person-column,
+    #paymentTable tbody td.person-cell {
+        min-width: 100px;
+        max-width: 120px;
+    }
+}
+
+/* Touch-friendly adjustments */
+@media (hover: none) and (pointer: coarse) {
+    #paymentTable tbody td.payment-cell {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
